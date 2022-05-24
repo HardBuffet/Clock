@@ -59,6 +59,7 @@
 /* TYPOGRAPHY */
 .page {
   min-height: 100vh;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -66,12 +67,14 @@
   margin: auto;
   width: 50vw;
   height: 30vh;
+  display: -ms-flexbox;
   display: flex;
 }
 .app__text {
   font-size: 1.88rem;
   font-size: clamp(1.88rem, 0.68rem + 6.36vw, 6.25rem);
   margin: auto;
+  display: -ms-flexbox;
   display: flex;
   gap: 1vw;
 }
