@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600;700&display=swap');
+
+
+:root {
+  --marPad: 0;
+  --mainFont: 'Odibee Sans', cursive;
+  --fallbackFont: 'Roboto Mono', monospace;;
+
+  /* COLORS */
+  --pageBg: #da2c38;
+  --pageColor: #f1faff;
+  --appBg: inherit;
+  --appBoxShadowColorInset: rgba(0,0,0,0.5);
+  --appBoxShadowColorOutset: rgba(0,0,0,0.5);
+  --appTextColor: #da2c38;
+  --appTextShadowColor: #f1faff;
+
+  /* BOX SHADOWS */
+  --appBoxShadow:
+      inset 0 0 100px var(--appBoxShadowColorInset),
+      10px 10px 20px var(--appBoxShadowColorOutset);
+  --appTextTextShadow:
+      2px 2px 0 var(--appTextShadowColor),
+      -2px -2px 0 var(--appTextShadowColor),
+      2px -2px 0 var(--appTextShadowColor),
+      -2px 2px 0 var(--appTextShadowColor);
+}
+
+/* DEFAULTS */
+* {
+  margin: var(--marPad);
+  padding: var(--marPad);
+  box-sizing: border-box;
+}
+
+/* LOOK */
+.page {
+  background: var(--pageBg);
+  color: var(--pageColor);
+  font-family: var(--fallbackFont);
+}
+
+.app {
+  background: var(--appBg);
+  box-shadow: var(--appBoxShadow);
+  border-radius: 20px;
+}
+
+.app__text {
+  font-family: var(--mainFont);
+  color: var(--appTextColor);
+  text-shadow: var(--appTextTextShadow);
+}
+
+/* TYPOGRAPHY */
+.page {
+  min-height: 100vh;
+  display: flex;
+}
+
+.page__app {
+  margin: auto;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+}
+.app__text {
+  font-size: 1.88rem;
+  font-size: clamp(1.88rem, 0.68rem + 6.36vw, 6.25rem);
+  margin: auto;
+  display: flex;
+  gap: 1vw;
+}
